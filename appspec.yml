@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ec2-user/demo
+hooks:
+  AfterInstall:
+    - location: scripts/build
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: scripts/start
+      timeout: 60
+      runas: root
