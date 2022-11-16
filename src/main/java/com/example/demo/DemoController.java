@@ -8,6 +8,6 @@ public class DemoController {
 
     @GetMapping
     public String getMessage() {
-        return "Good morning";
+        return "Chào team Java";
     }
 }
